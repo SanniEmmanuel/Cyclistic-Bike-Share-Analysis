@@ -99,13 +99,15 @@ To find out the average duration of a ride for each user type
     avg_casual_member_ride_length = casual_member   ['ride_length'].mean()
     avg_casual_member_ride_length
 
-![length_casual](images/length_casual.png)*Average Ride Time for Casual Riders*
+![length_casual](images/length_casual.png)
+*Average Ride Time for Casual Riders*
 
     paid_member = merged_df[merged_df['member_casual'] == 'member']
     avg_paid_member_ride_length = paid_member   ['ride_length'].mean()
     avg_paid_member_ride_length
 
-![length_member](images/length_member.png) *Average Ride Time for Member Riders*
+![length_member](images/length_member.png) 
+*Average Ride Time for Member Riders*
 
 From the outputs, it is obvious that the average duration of a ride for casual riders is higher than that of member riders
 
@@ -114,12 +116,14 @@ To find out the maximum duration of a ride for each user type
     max_casual_member_ride_length = casual_member['ride_length'].max()
     max_casual_member_ride_length
 
-![max_casual](images\max_casual.png)*Maximum Duration of Rides for Casual Riders*
+![max_casual](images\max_casual.png)
+*Maximum Duration of Rides for Casual Riders*
 
     max_paid_member_ride_length = paid_member['ride_length'].max()
     max_paid_member_ride_length
 
-![max_member](images/max_member.png)*Maximum Duration of Rides for Member Riders*
+![max_member](images/max_member.png)
+*Maximum Duration of Rides for Member Riders*
 
 From the outputs, casual riders have a higher maximum ride length than the member riders
 
@@ -128,24 +132,28 @@ To find out the most frequent day of the week that riders ride for each user typ
     mode_ride_day_casual_member = casual_member['day_of_week_name'].mode()
     mode_ride_day_casual_member
 
-![mode_casual](images/mode_casual.png)*Most Frequent Ride Day for Casual Riders*
+![mode_casual](images/mode_casual.png)
+*Most Frequent Ride Day for Casual Riders*
 
     mode_ride_day_paid_member = paid_member['day_of_week_name'].mode()
     mode_ride_day_paid_member
 
-![mode_member](images/mode_member.png)*Most Frequent Ride Day for Member Riders*
+![mode_member](images/mode_member.png)
+*Most Frequent Ride Day for Member Riders*
 
 Now let's take a look at the number of rides per day for each user type
 
     ride_per_day_casual = casual_member.groupby('day_of_week_name')['ride_id'].count().sort_values(ascending=False)
     ride_per_day_casual
 
-![perday_casual](images/perday_casual.png)*Number of Rides per Day for Casual Riders*
+![perday_casual](images/perday_casual.png)
+*Number of Rides per Day for Casual Riders*
 
     ride_per_day_paid = paid_member.groupby('day_of_week_name')['ride_id'].count().sort_values(ascending=False)
     ride_per_day_paid
 
-![perday_member](images/perday_member.png)*Number of Rides per Day for Member Riders*
+![perday_member](images/perday_member.png)
+*Number of Rides per Day for Member Riders*
 
 Plotting these outputs against each other;
 
@@ -165,7 +173,8 @@ To find out the average ride length per day for each user type
     avg_casual_length_per_day_df['casual_ride_length_avg'] = avg_casual_length_per_day_df['casual_ride_length_avg']/pd.Timedelta(minutes=1) #To get ride length in minutes
     avg_casual_length_per_day_df
 
-![avgperday_casual](images/avgperday_casual.png)*Average Ride Length per Day for Casual Riders*
+![avgperday_casual](images/avgperday_casual.png)
+*Average Ride Length per Day for Casual Riders*
 
     avg_paid_length_per_day = paid_member[['day_of_week_name', 'ride_length']]
     avg_paid_length_per_day =   avg_paid_length_per_day.groupby   ('day_of_week_name')['ride_length'].mean()
@@ -177,7 +186,8 @@ To find out the average ride length per day for each user type
 
     avg_paid_length_per_day_df
 
-![avgperday_member](images/avgperday_member.png)*Average Ride Length per Day for Member Riders*
+![avgperday_member](images/avgperday_member.png)
+*Average Ride Length per Day for Member Riders*
 
 Plotting these two outputs together;
 
