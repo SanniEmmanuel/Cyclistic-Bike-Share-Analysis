@@ -116,7 +116,7 @@ To find out the maximum duration of a ride for each user type
     max_casual_member_ride_length = casual_member['ride_length'].max()
     max_casual_member_ride_length
 
-![max_casual](images\max_casual.png)
+![max_casual](images/max_casual.png)
 *Maximum Duration of Rides for Casual Riders*
 
     max_paid_member_ride_length = paid_member['ride_length'].max()
