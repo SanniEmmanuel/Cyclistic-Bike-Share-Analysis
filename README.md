@@ -1,6 +1,6 @@
 # Cyclistic Bike Share Analysis
 
-![cyclistic](images/cyclistic.png)
+![cyclistic](images/cyclistic.jpeg)
 
 ## Introduction
 Cyclistic is a bike-share company based in Chicago. Their bike-share program features over 5,800 bicycles that are geotracked and locked into a network of 692 docking stations across Chicago. Cyclistic's marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. These pricing plans helped the company categorize its customers into two types;
@@ -180,9 +180,9 @@ To find out the average ride length per day for each user type
     avg_paid_length_per_day =   avg_paid_length_per_day.groupby   ('day_of_week_name')['ride_length'].mean()
     
     avg_paid_length_per_day_df = pd.DataFrame   ({"day_of_week":avg_paid_length_per_day.index,
-                                        "paid_ride_le   ngth_avg":     avg_paid_leng   th_per_day.    values})
+    "paid_ride_length_avg": avg_paid_length_per_day.values})
 
-    avg_paid_length_per_day_df  ['paid_ride_length_avg'] =    avg_paid_length_per_day_df ['paid_ride_length_avg']/pd.Timedelta(minutes=1)     #To get ride length in minutes
+    avg_paid_length_per_day_df  ['paid_ride_length_avg'] =    avg_paid_length_per_day_df ['paid_ride_length_avg']/pd.Timedelta(minutes=1) #To get ride length in minutes
 
     avg_paid_length_per_day_df
 
@@ -215,6 +215,8 @@ The visualization of the result is shown below
 ![monthly](images/monthly.png)
 
 There is a general rise in the use of Cyclistic's program between June to August for both user types. This rise may be a result of vacations or the warm weather that comes with the summer season. It is also worth noting that between the months of September and May, there were more active member riders than casual riders. 30% of Cyclistic users use the program to commute to work and these months normally are active months in most workplaces and schools meaning less vacations and lesser time to ride for leisure and hence the gap between the number of rides among the user types.
+
+The notebook used for my analysis can be found [here](https://github.com/SanniEmmanuel/Cyclistic-Bike-Share-Analysis/blob/main/Cyclistic%20Analysis.ipynb)
 
 The dashboard for these visualizations is shown below and can be found [here](https://public.tableau.com/views/CyclisticBikeShareAnalysisVisualizations-GoogleDataAnalyticsProfessionalCertificate/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
