@@ -1,6 +1,6 @@
 # Cyclistic Bike Share Analysis
 
-![cyclistic](images\cyclistic.png)
+![cyclistic](images/cyclistic.png)
 
 ## Introduction
 Cyclistic is a bike-share company based in Chicago. Their bike-share program features over 5,800 bicycles that are geotracked and locked into a network of 692 docking stations across Chicago. Cyclistic's marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. These pricing plans helped the company categorize its customers into two types;
